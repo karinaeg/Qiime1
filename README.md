@@ -1,4 +1,4 @@
-# Qiime1
+# Qiime
 QIIME is an open-source bioinformatics pipeline for performing microbiome analysis from raw DNA sequencing data. 
 QIIME is designed to take users from raw sequencing data generated on the Illumina or other platforms through publication quality graphics and statistics. 
 This includes demultiplexing and quality filtering, OTU picking, taxonomic assignment, and phylogenetic reconstruction, and diversity analyses and visualizations.
@@ -34,4 +34,12 @@ docker container start <<container_id>>
 Command to delete all containers:
 ```
 docker rm $(docker ps -a -q)
+```
+## Using Qiime1
+### Otu picking
+[OTU picking](http://qiime.org/scripts/pick_otus.html) assigns similar sequences to operational taxonomic units, or OTUs, by clustering sequences based on a user-defined similarity threshold. Sequences which are similar at or above the threshold level are taken to represent the presence of a taxonomic unit in the sequence collection.
+
+Using the seqs.fna file and outputting the results to the directory “picked_otus/”:
+```
+pick_otus.py -i seqs.fna -o picked_otus_default
 ```
