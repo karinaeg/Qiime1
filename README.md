@@ -14,10 +14,24 @@ docker pull mbari/qiime1
 Your data will be in /mnt/data, the command in the shared repository has an error on `/bash/bin`, this is the correct syntax:
 
 ```
-docker run --name qiime1 -v /Path/to/data:/mnt/data -i -t mbari/qiime1 /bin/bash
+docker run --name qiime1 -v $(pwd):/mnt/data -i -t mbari/qiime1 /bin/bash
 ```
 Once inside the container use the following command:
 
 ```
 source activate qiime1
+```
+### Other commands
+Docker command to list the running containers:
+```
+docker ps -a
+```
+Command to atart/stop a container:
+```
+docker container stop <<container_id>>
+docker container start <<container_id>>
+```
+Command to delete all containers:
+```
+docker rm $(docker ps -a -q)
 ```
