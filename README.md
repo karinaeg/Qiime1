@@ -73,6 +73,10 @@ To visualizes an OTU table as a heatmap, use the following command:
 ```
 make_otu_heatmap.py -i otu_table.biom -o heatmap.pdf
 ```
+Output:
+```
+1A_Suaeda_soil_DEC_CDhit454_tax_assignments.log  1A_Suaeda_soil_DEC_CDhit454_tax_assignments.txt  heatmap.pdf  otu_table.biom
+```
 If we want to generate it as a PNG:
 ```
 make_otu_heatmap.py -i otu_table.biom -o heatmap.png -g png
