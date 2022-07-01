@@ -57,7 +57,7 @@ From `pick_otus.py` results make the OTU table using an OTU file  and a taxonomy
 make_otu_table.py -i seq_otus.txt -t seg_tax_assignment.txt -o otu_table.biom
 ```
 ### Plot heatmap of OTU table
-The higher the relative abundance of an OTU in a sample, the more intense the color at the corresponsing position in the heatmap. By default, the OTUs (rows) will be clustered by UPGMA hierarchical clustering, and the samples (columns) will be presented in the order in which they appear in the OTU table.
+Now we have to run `make_otu_heatmap.py`, it visualizes an OTU table as a heatmap where each row corresponds to an OTU and each column corresponds to a sample. The higher the relative abundance of an OTU in a sample, the more intense the color at the corresponsing position in the heatmap. By default, the OTUs (rows) will be clustered by UPGMA hierarchical clustering, and the samples (columns) will be presented in the order in which they appear in the OTU table. 
 
 To visualizes an OTU table as a heatmap, use the following command:
 ```
