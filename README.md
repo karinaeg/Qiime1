@@ -44,7 +44,7 @@ In this case, in this case, we are going to use the uclust consensus taxonomy as
 ```
 assign_taxonomy.py -i seqs.fasta
 ```
-### Otu picking
+### OTU picking
 [OTU picking](http://qiime.org/scripts/pick_otus.html) assigns similar sequences to operational taxonomic units, or OTUs, by clustering sequences based on a user-defined similarity threshold. Sequences which are similar at or above the threshold level are taken to represent the presence of a taxonomic unit in the sequence collection.
 
 Using the seqs.fna file and outputting the results to the directory “picked_otus/”:
@@ -57,4 +57,15 @@ The next step is to tabulate the number of times an OTU is found in each sample 
 From `pick_otus.py` results make the OTU table using an OTU file  and a taxonomy assignment file:
 ```
 make_otu_table.py -i seq_otus.txt -t seg_tax_assignment.txt -o otu_table.biom
+```
+### Plot heatmap of OTU table
+The higher the relative abundance of an OTU in a sample, the more intense the color at the corresponsing position in the heatmap. By default, the OTUs (rows) will be clustered by UPGMA hierarchical clustering, and the samples (columns) will be presented in the order in which they appear in the OTU table.
+
+To visualizes an OTU table as a heatmap, use the following command:
+```
+make_otu_heatmap.py -i otu_table.biom -o heatmap.pdf
+```
+If we want to generate it as a PNG:
+```
+make_otu_heatmap.py -i otu_table.biom -o heatmap.png -g png
 ```
