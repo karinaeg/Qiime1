@@ -38,18 +38,16 @@ docker rm $(docker ps -a -q)
 ```
 ## Using Qiime1
 ### Assign taxonomy to each sequence
-Given a set of sequences, assign_taxonomy.py attempts to assign the taxonomy of each sequence. Currently the methods implemented are assignment. The output of this step is an observation metadata mapping file of input sequence identifiers (1st column of output file) to taxonomy (2nd column) and quality score (3rd column). 
-
-In this case, in this case, we are going to use the uclust consensus taxonomy assigner (default):
+We nee to use the `assign_taxonomy.py` script, it attempts to assign the taxonomy of each sequence given. Currently the methods implemented are assignment. In this case, in this case, we are going to use the uclust consensus taxonomy assigner (default):
 ```
 assign_taxonomy.py -i seqs.fasta
 ```
 ### OTU picking
-[OTU picking](http://qiime.org/scripts/pick_otus.html) assigns similar sequences to operational taxonomic units, or OTUs, by clustering sequences based on a user-defined similarity threshold. Sequences which are similar at or above the threshold level are taken to represent the presence of a taxonomic unit in the sequence collection.
+We have to assigns similar sequences to operational taxonomic units, or OTUs, by clustering sequences based on a user-defined similarity threshold. Sequences which are similar at or above the threshold level are taken to represent the presence of a taxonomic unit in the sequence collection. These actions can be executed with the `pick_otus.py` script.
 
-Using the seqs.fna file and outputting the results to the directory “picked_otus/”:
+Using the seqs.fna file and outputting the results to the directory `picked_otus/`:
 ```
-pick_otus.py -i seqs.fasta -o picked_otus_default
+pick_otus.py -i seqs.fasta -o picked_otus
 ```
 ### Make OTU table
 The next step is to tabulate the number of times an OTU is found in each sample and add the taxonomic predictions for each OTU in the last column if a taxonomy file is provided.
