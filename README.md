@@ -12,7 +12,7 @@ To check if it's installed or not, we open our terminal and write:
 docker version
 ```
 
-## Docker Qiime1 Container Session:
+## Docker Qiime1 Container Session
 Our files have the 454 format, so if we want qiime to read them, we need the qiime1 version, a docker container allows us to use that version and instead of creating a docker cointainer with the qiime1 version from the beggining you already can use an existing one from the [hohonuuli/qiime1 repository](https://github.com/hohonuuli/qiime1).
  
 To start an interactive session, first start a bash shell into the container:
