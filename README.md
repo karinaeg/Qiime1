@@ -117,7 +117,7 @@ Output:
 ```
 If we are working on a server and we want to visualize the heatmap, we can copy it to our local server:
 ```
-scp [options] username1@source_host:directory1/heatmap.pdf username2@destination_host:directory2/heatmap.pdf
+scp -r username1@source_host:directory1/heatmap.pdf username2@destination_host:directory2/heatmap.pdf
 ```
 
 
