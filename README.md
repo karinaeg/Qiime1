@@ -53,7 +53,7 @@ We nee to use the `assign_taxonomy.py` script, it attempts to assign the taxonom
 assign_taxonomy.py -i seqs.fasta
 ```
 ### OTU picking
-We have to assigns similar sequences to operational taxonomic units, or OTUs, by clustering sequences based on a user-defined similarity threshold. Sequences which are similar at or above the threshold level are taken to represent the presence of a taxonomic unit in the sequence collection. These actions can be executed with the `pick_otus.py` script. It generes a `.log`,`.txt` an `.uc` files.
+We have to assigns similar sequences to operational taxonomic units, or OTUs, by clustering sequences based on a user-defined similarity threshold. Sequences which are similar at or above the threshold level are taken to represent the presence of a taxonomic unit in the sequence collection. These actions can be executed with the `pick_otus.py` script. It generes a `.log`,`.txt` and a `.uc` file.
 
 Using the seqs.fna file and outputting the results to the directory `picked_otus/`:
 ```
