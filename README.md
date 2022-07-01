@@ -59,6 +59,17 @@ Using the seqs.fna file and outputting the results to the directory `picked_otus
 ```
 pick_otus.py -i seqs.fasta -o picked_otus
 ```
+Output:
+```
+1A_Suaeda_soil_DEC_CDhit454_clusters.uc  2A_ATCA_soil_DEC_CDhit454_otus.log         3A_Suaeda_litter_DEC_CDhit454_otus.txt     4B_ATCA_litter_APR_CDhit454_clusters.uc  5B_ATCA_litter_AGO_CDhit454_otus.log
+1A_Suaeda_soil_DEC_CDhit454_otus.log     2A_ATCA_soil_DEC_CDhit454_otus.txt         3B_Suaeda_litter_APR_CDhit454_clusters.uc  4B_ATCA_litter_APR_CDhit454_otus.log     5B_ATCA_litter_AGO_CDhit454_otus.txt
+1A_Suaeda_soil_DEC_CDhit454_otus.txt     2B_ATCA_soil_APR_CDhit454_clusters.uc      3B_Suaeda_litter_APR_CDhit454_otus.log     4B_ATCA_litter_APR_CDhit454_otus.txt     ATCAseed_CDhit454_clusters.uc
+1B_Suaeda_soil_APR_CDhit454_clusters.uc  2B_ATCA_soil_APR_CDhit454_otus.log         3B_Suaeda_litter_APR_CDhit454_otus.txt     5A_ATCA_soil_AGO_CDhit454_clusters.uc    ATCAseed_CDhit454_otus.log
+1B_Suaeda_soil_APR_CDhit454_otus.log     2B_ATCA_soil_APR_CDhit454_otus.txt         4A_ATCA_litter_DEC_CDhit454_clusters.uc    5A_ATCA_soil_AGO_CDhit454_otus.log       ATCAseed_CDhit454_otus.txt
+1B_Suaeda_soil_APR_CDhit454_otus.txt     3A_Suaeda_litter_DEC_CDhit454_clusters.uc  4A_ATCA_litter_DEC_CDhit454_otus.log       5A_ATCA_soil_AGO_CDhit454_otus.txt       
+2A_ATCA_soil_DEC_CDhit454_clusters.uc    3A_Suaeda_litter_DEC_CDhit454_otus.log     4A_ATCA_litter_DEC_CDhit454_otus.txt       5B_ATCA_litter_AGO_CDhit454_clusters.uc
+
+```
 ### Make OTU table
 The next step is to tabulate the number of times an OTU is found in each sample and add the taxonomic predictions for each OTU in the last column if a taxonomy file is provided. We are going to use the `make_otu_table.py` script.
 
