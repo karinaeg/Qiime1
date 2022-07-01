@@ -11,7 +11,18 @@ To check if it's installed or not, we open our terminal and write:
 ```
 docker version
 ```
-
+It has to show something like this: 
+```
+ Cloud integration: v1.0.24
+ Version:           20.10.14
+ API version:       1.41
+ Go version:        go1.16.15
+ Git commit:        a224090
+ Built:             Thu Mar 24 01:53:11 2022
+ OS/Arch:           windows/amd64
+ Context:           default
+ Experimental:      true
+```
 ## Docker Qiime1 Container Session
 Our files have the 454 format, so if we want qiime to read them, we need the qiime1 version, a docker container allows us to use that version and instead of creating a docker cointainer with the qiime1 version from the beggining you already can use an existing one from the [hohonuuli/qiime1 repository](https://github.com/hohonuuli/qiime1).
  
