@@ -51,3 +51,10 @@ Using the seqs.fna file and outputting the results to the directory “picked_ot
 ```
 pick_otus.py -i seqs.fasta -o picked_otus_default
 ```
+### Make OTU table
+The next step is to tabulate the number of times an OTU is found in each sample and add the taxonomic predictions for each OTU in the last column if a taxonomy file is provided.
+
+From `pick_otus.py` results make the OTU table using an OTU file  and a taxonomy assignment file:
+```
+make_otu_table.py -i seq_otus.txt -t seg_tax_assignment.txt -o otu_table.biom
+```
