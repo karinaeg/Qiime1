@@ -37,7 +37,7 @@ Docker command to list the running containers:
 ```
 docker ps -a
 ```
-Command to atart/stop a container:
+Command to start and stop a container:
 ```
 docker container stop <<container_id>>
 docker container start <<container_id>>
