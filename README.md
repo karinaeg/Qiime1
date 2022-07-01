@@ -31,6 +31,8 @@ Once inside the container use the following command:
 source activate qiime1
 ```
 ### Other commands
+If we stop working in the interactive session for a while, we have to create a new one and delete the other one, here are some commands that can help us to do these actions:
+
 Docker command to list the running containers:
 ```
 docker ps -a
