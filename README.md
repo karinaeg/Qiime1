@@ -1,11 +1,19 @@
 # Endophyte analysis using Qiime1
-## Qiime
+## What is Qiime?
 QIIME is an open-source bioinformatics pipeline for performing microbiome analysis from raw DNA sequencing data. 
 QIIME is designed to take users from raw sequencing data generated on the Illumina or other platforms through publication quality graphics and statistics. 
 This includes demultiplexing and quality filtering, OTU picking, taxonomic assignment, and phylogenetic reconstruction, and diversity analyses and visualizations.
 
-## Docker Container Instalation
-Our files have the 454 format, so if we want qiime to read them, we need the qiime1 version, a docker container allows us to use that version, you can find it in the [hohonuuli/qiime1 repository](https://github.com/hohonuuli/qiime1):
+## Docker Instalation
+First of all, we must to have Docker installed in our computer, here's a quick [step-by-step tutorial](https://docs.docker.com/desktop/windows/install/) of how to install it.
+
+To check if it's installed or not, we open our terminal and write:
+```
+docker version
+```
+
+## Docker Qiime1 Container Session:
+Our files have the 454 format, so if we want qiime to read them, we need the qiime1 version, a docker container allows us to use that version and instead of creating a docker cointainer with the qiime1 version from the beggining you already can use an existing one from the [hohonuuli/qiime1 repository](https://github.com/hohonuuli/qiime1).
  
 To start an interactive session, first start a bash shell into the container:
 
