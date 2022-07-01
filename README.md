@@ -5,7 +5,7 @@ QIIME is designed to take users from raw sequencing data generated on the Illumi
 This includes demultiplexing and quality filtering, OTU picking, taxonomic assignment, and phylogenetic reconstruction, and diversity analyses and visualizations.
 
 ## Docker Container Instalation
-Our files have the 454 format, so if we want qiime to read them, we need the qiime1 version, a docker container allows us to use that version, you can find it in the following link: https://github.com/hohonuuli/qiime1
+Our files have the 454 format, so if we want qiime to read them, we need the qiime1 version, a docker container allows us to use that version, you can find it in the [hohonuuli/qiime1 repository](https://github.com/hohonuuli/qiime1):
  
 To start an interactive session, first start a bash shell into the container:
 
