@@ -115,3 +115,11 @@ Output:
 ```
 1A_Suaeda_soil_DEC_CDhit454_tax_assignments.log  1A_Suaeda_soil_DEC_CDhit454_tax_assignments.txt  heatmap.pdf   heatmap.png  otu_table.biom
 ```
+If we are working on a server and we want to visualize the heatmap, we can copy it to our local server:
+```
+scp [options] username1@source_host:directory1/heatmap.pdf username2@destination_host:directory2/heatmap.pdf
+```
+
+
+
+
