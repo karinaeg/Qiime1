@@ -42,6 +42,10 @@ Command to start and stop a container:
 docker container stop <<container_id>>
 docker container start <<container_id>>
 ```
+Command to delete a container:
+```
+docker rm <<container_id>>
+```
 Command to delete all containers:
 ```
 docker rm $(docker ps -a -q)
