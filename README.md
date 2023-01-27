@@ -125,6 +125,10 @@ If we are working on a server and we want to visualize the heatmap pdf or png, w
 scp -r username1@source_host:directory1/heatmap.pdf username2@destination_host:directory2/heatmap.pdf
 ```
 
+As an alternative to carry out the analyses, the R phyloseq package was used to obtain some graphical representation that provides us with information on the sequences. OTU tables obtained with QIIME were imported and abundance analysis graphs were made.
+The script was adapted from [the following lesson](https://carpentries-incubator.github.io/metagenomics/07-phyloseq/index.html).
+To distinguish the taxa, the identification of the OTUs whose relative abundance is less than 0.5% was changed.
+Since the files could be created and they contain information, abundance diagrams of the taxa in our samples were made.
 
 ```
 library("phyloseq")
