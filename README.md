@@ -170,10 +170,14 @@ This commands helps to have a sense of the evenness:
 ```
 summary(merged_metagenomes@otu_table@.Data)
 ```
+Next step is to convert the number of assigned reads into percentages because metagenomes have different sizes:
+
 ```
 View(merged_metagenomes@tax_table@.Data)
-
 percentages <- transform_sample_counts(merged_metagenomes, function(x) x*100 / sum(x) )
+```
+next
+```
 percentages_glom <- tax_glom(percentages, taxrank = 'Genus')
 View(percentages_glom@tax_table@.Data)
 percentages_df <- psmelt(percentages_glom)
