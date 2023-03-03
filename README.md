@@ -82,7 +82,10 @@ We have to assign the multiplexed reads to samples based on their nucleotide bar
 ```
 split_libraries.py -m Mapping_File.txt -o Split_Library_Output/
 ```
-
+The Split_Library_Output directory contains:
+```
+histograms.txt seqs.fna split_library_log.txt
+```
 ### Assign taxonomy to each sequence
 We need to use the `assign_taxonomy.py` script, it attempts to assign the taxonomy of each sequence given. Currently the methods implemented are assignment. In this case, in this case, we are going to use the uclust consensus taxonomy assigner (default):
 ```
