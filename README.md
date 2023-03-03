@@ -148,17 +148,16 @@ merged_metagenomes <- import_biom("/home/karina/qiime/Ruiz-Font/data/otu_table.b
 class(merged_metagenomes)
 ```
 
-See the tax_table content and remove some unnecessary characters in the OTUs id and put names to the taxonomic ranks:
+See the `tax_table` content and remove some unnecessary characters in the OTUs id and put names to the taxonomic ranks, also explore how many phyla the `tax_table` contains:
 
 ```
 View(merged_metagenomes@tax_table@.Data)
 merged_metagenomes@tax_table@.Data <- substring(merged_metagenomes@tax_table@.Data, 4)
 colnames(merged_metagenomes@tax_table@.Data)<- c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
-```
-
-```
 unique(merged_metagenomes@tax_table@.Data[,"Phylum"])
+```
 
+```
 View(merged_metagenomes@otu_table@.Data)
 
 merged_metagenomes <- subset_taxa(merged_metagenomes, Kingdom == "Bacteria")
