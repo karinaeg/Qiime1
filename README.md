@@ -156,10 +156,13 @@ merged_metagenomes@tax_table@.Data <- substring(merged_metagenomes@tax_table@.Da
 colnames(merged_metagenomes@tax_table@.Data)<- c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
 unique(merged_metagenomes@tax_table@.Data[,"Phylum"])
 ```
+This command allows to see the information about how many sequenced reads corresponding to a certain OTU are in each sample:
 
 ```
 View(merged_metagenomes@otu_table@.Data)
+```
 
+```
 merged_metagenomes <- subset_taxa(merged_metagenomes, Kingdom == "Bacteria")
 merged_metagenomes
 summary(merged_metagenomes@otu_table@.Data)
