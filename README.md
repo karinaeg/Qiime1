@@ -75,7 +75,7 @@ validate_mapping_file.py -m Fasting_Map.txt -o mapping_output
 Output:
 
 ```
-Fasting_Map.html  Fasting_Map.log Fasting_Map_corrected.txt  overlib.js
+Fasting_Map.html  Fasting_Map.log  Fasting_Map_corrected.txt  overlib.js
 ```
 
 ### Assign taxonomy to each sequence
