@@ -67,8 +67,14 @@ Command to delete all containers:
 docker rm $(docker ps -a -q)
 ```
 ## Using Qiime1
+### Validate Mapping file
+We have to make sure that the mapping file is formatted correctly
+```
+validate_mapping_file.py -m Fasting_Map.txt -o mapping_output
+```
+
 ### Assign taxonomy to each sequence
-We nee to use the `assign_taxonomy.py` script, it attempts to assign the taxonomy of each sequence given. Currently the methods implemented are assignment. In this case, in this case, we are going to use the uclust consensus taxonomy assigner (default):
+We need to use the `assign_taxonomy.py` script, it attempts to assign the taxonomy of each sequence given. Currently the methods implemented are assignment. In this case, in this case, we are going to use the uclust consensus taxonomy assigner (default):
 ```
 assign_taxonomy.py -i seqs.fasta
 ```
