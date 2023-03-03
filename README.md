@@ -161,12 +161,16 @@ This command allows to see the information about how many sequenced reads corres
 ```
 View(merged_metagenomes@otu_table@.Data)
 ```
-
+To see the bacterial diversity:
 ```
 merged_metagenomes <- subset_taxa(merged_metagenomes, Kingdom == "Bacteria")
 merged_metagenomes
+```
+This commands helps to have a sense of the evenness:
+```
 summary(merged_metagenomes@otu_table@.Data)
-
+```
+```
 View(merged_metagenomes@tax_table@.Data)
 
 percentages <- transform_sample_counts(merged_metagenomes, function(x) x*100 / sum(x) )
