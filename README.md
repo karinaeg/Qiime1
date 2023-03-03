@@ -72,6 +72,11 @@ We have to make sure that the mapping file is formatted correctly
 ```
 validate_mapping_file.py -m Fasting_Map.txt -o mapping_output
 ```
+Output:
+
+```
+Fasting_Map.html  Fasting_Map.log Fasting_Map_corrected.txt  overlib.js
+```
 
 ### Assign taxonomy to each sequence
 We need to use the `assign_taxonomy.py` script, it attempts to assign the taxonomy of each sequence given. Currently the methods implemented are assignment. In this case, in this case, we are going to use the uclust consensus taxonomy assigner (default):
