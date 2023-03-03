@@ -125,6 +125,7 @@ If we are working on a server and we want to visualize the heatmap pdf or png, w
 scp -r username1@source_host:directory1/heatmap.pdf username2@destination_host:directory2/heatmap.pdf
 ```
 
+## Alternative way to explore the data
 As an alternative to carry out the analyses, the R phyloseq package was used to obtain some graphical representation that provides us with information on the sequences. OTU tables obtained with QIIME were imported and abundance analysis graphs were made.
 The script was adapted from [the following lesson](https://carpentries-incubator.github.io/metagenomics/07-phyloseq/index.html).
 To distinguish the taxa, the identification of the OTUs whose relative abundance is less than 0.5% was changed.
@@ -140,10 +141,15 @@ library("patchwork")
 setwd("~/qiime/Ruiz-Font")
 ```
 
+Second step is to import the BIOM file format, obtained by running the `make_otu_table.py` script and explore the result by asking the class of the object created and doing a close inspection of some of its content:
+
 ```
 merged_metagenomes <- import_biom("/home/karina/qiime/Ruiz-Font/data/otu_table.biom")
-
 class(merged_metagenomes)
+```
+
+
+```
 View(merged_metagenomes@tax_table@.Data)
 merged_metagenomes@tax_table@.Data <- substring(merged_metagenomes@tax_table@.Data, 4)
 colnames(merged_metagenomes@tax_table@.Data)<- c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
