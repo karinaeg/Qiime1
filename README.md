@@ -130,6 +130,7 @@ The script was adapted from [the following lesson](https://carpentries-incubator
 To distinguish the taxa, the identification of the OTUs whose relative abundance is less than 0.5% was changed.
 Since the files could be created and they contain information, abundance diagrams of the taxa in our samples were made.
 
+The first step is to import the libraries that will be used and set the working directory:
 ```
 library("phyloseq")
 library("ggplot2")
@@ -137,7 +138,9 @@ library("RColorBrewer")
 library("patchwork")
 
 setwd("~/qiime/Ruiz-Font")
+```
 
+```
 merged_metagenomes <- import_biom("/home/karina/qiime/Ruiz-Font/data/otu_table.biom")
 
 class(merged_metagenomes)
