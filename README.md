@@ -128,8 +128,6 @@ scp -r username1@source_host:directory1/heatmap.pdf username2@destination_host:d
 ## Alternative way to explore the data
 As an alternative to carry out the analyses, the R phyloseq package was used to obtain some graphical representation that provides us with information on the sequences. OTU tables obtained with QIIME were imported and abundance analysis graphs were made.
 The script was adapted from [the following lesson](https://carpentries-incubator.github.io/metagenomics/07-phyloseq/index.html).
-To distinguish the taxa, the identification of the OTUs whose relative abundance is less than 0.5% was changed.
-Since the files could be created and they contain information, abundance diagrams of the taxa in our samples were made.
 
 The first step is to import the libraries that will be used and set the working directory:
 ```
@@ -176,7 +174,7 @@ Next step is to convert the number of assigned reads into percentages because me
 View(merged_metagenomes@tax_table@.Data)
 percentages <- transform_sample_counts(merged_metagenomes, function(x) x*100 / sum(x) )
 ```
-next
+Phyloseq allows to make a taxa visualization more flexible and personalized by making abundance plots of the taxa in the samples. The first exploration is by Genus:
 ```
 percentages_glom <- tax_glom(percentages, taxrank = 'Genus')
 View(percentages_glom@tax_table@.Data)
@@ -192,7 +190,9 @@ relative_plot <- ggplot(data=percentages_df, aes(x=Sample, y=Abundance, fill=Gen
 pdf("Genuspercentages.pdf")
 relative_plot
 dev.off()
-
+```
+The second abundance plot is by Family
+```
 percentages <- transform_sample_counts(merged_metagenomes, function(x) x*100 / sum(x) )
 percentages_glom <- tax_glom(percentages, taxrank = 'Family')
 View(percentages_glom@tax_table@.Data)
@@ -210,4 +210,5 @@ relative_plot
 dev.off()
 
 ```
-
+To distinguish the taxa, the identification of the OTUs whose relative abundance is less than 0.5% was changed.
+Since the files could be created and they contain information, abundance diagrams of the taxa in our samples were made.
