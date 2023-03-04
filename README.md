@@ -160,14 +160,14 @@ setwd("~/qiime/Ruiz-Font")
 
 Second step is to import the BIOM file format, obtained by running the `make_otu_table.py` script and explore the result by asking the class of the object created and doing a close inspection of some of its content:
 
-```
+```r
 merged_metagenomes <- import_biom("/home/karina/qiime/Ruiz-Font/data/otu_table.biom")
 class(merged_metagenomes)
 ```
 
 See the `tax_table` content and remove some unnecessary characters in the OTUs id and put names to the taxonomic ranks, also explore how many phyla the `tax_table` contains:
 
-```
+```r
 View(merged_metagenomes@tax_table@.Data)
 merged_metagenomes@tax_table@.Data <- substring(merged_metagenomes@tax_table@.Data, 4)
 colnames(merged_metagenomes@tax_table@.Data)<- c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
@@ -175,26 +175,26 @@ unique(merged_metagenomes@tax_table@.Data[,"Phylum"])
 ```
 This command allows to see the information about how many sequenced reads corresponding to a certain OTU are in each sample:
 
-```
+```r
 View(merged_metagenomes@otu_table@.Data)
 ```
 To see the bacterial diversity:
-```
+```r
 merged_metagenomes <- subset_taxa(merged_metagenomes, Kingdom == "Bacteria")
 merged_metagenomes
 ```
 This commands helps to have a sense of the evenness:
-```
+```r
 summary(merged_metagenomes@otu_table@.Data)
 ```
 Next step is to convert the number of assigned reads into percentages because metagenomes have different sizes:
 
-```
+```r
 View(merged_metagenomes@tax_table@.Data)
 percentages <- transform_sample_counts(merged_metagenomes, function(x) x*100 / sum(x) )
 ```
 Phyloseq allows to make a taxa visualization more flexible and personalized by making abundance plots of the taxa in the samples. The first exploration is by Genus:
-```
+```r
 percentages_glom <- tax_glom(percentages, taxrank = 'Genus')
 View(percentages_glom@tax_table@.Data)
 percentages_df <- psmelt(percentages_glom)
@@ -211,7 +211,7 @@ relative_plot
 dev.off()
 ```
 The second abundance plot is by Family
-```
+```r
 percentages <- transform_sample_counts(merged_metagenomes, function(x) x*100 / sum(x) )
 percentages_glom <- tax_glom(percentages, taxrank = 'Family')
 View(percentages_glom@tax_table@.Data)
