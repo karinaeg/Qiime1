@@ -149,7 +149,7 @@ As an alternative to carry out the analyses, the R phyloseq package was used to 
 The script was adapted from [the following lesson](https://carpentries-incubator.github.io/metagenomics/07-phyloseq/index.html).
 
 The first step is to import the libraries that will be used and set the working directory:
-```
+```r
 library("phyloseq")
 library("ggplot2")
 library("RColorBrewer")
