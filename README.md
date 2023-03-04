@@ -8,7 +8,7 @@ This includes demultiplexing and quality filtering, OTU picking, taxonomic assig
 First of all, we must to have Docker installed in our computer, here's a quick [step-by-step tutorial](https://docs.docker.com/desktop/windows/install/) of how to install it.
 
 To check if it's installed or not, we open our terminal and write:
-```sh
+```
 docker version
 ```
 It has to show something like this: 
