@@ -1,4 +1,4 @@
-# Metagenomic Archeology using Qiime1
+# Metagenomic Archeology Using Qiime1
 ## What is Qiime?
 QIIME is an open-source bioinformatics pipeline for performing microbiome analysis from raw DNA sequencing data. 
 QIIME is designed to take users from raw sequencing data generated on the Illumina or other platforms through publication quality graphics and statistics. 
